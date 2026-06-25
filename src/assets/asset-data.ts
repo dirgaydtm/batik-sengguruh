@@ -20,6 +20,18 @@ import member3 from "./member3.png";
 import member4 from "./member4.png";
 import member5 from "./member5.png";
 import member6 from "./member6.png";
+import mitra1 from "./mitra1.png";
+import mitra2 from "./mitra2.png";
+import mitra3 from "./mitra3.png";
+import mitra4 from "./mitra4.png";
+import mitra5 from "./mitra5.png";
+import mitra6 from "./mitra6.png";
+import mitra7 from "./mitra7.png";
+import mitra8 from "./mitra8.png";
+import mitra9 from "./mitra9.png";
+import mitra10 from "./mitra10.png";
+import mitra11 from "./mitra11.png";
+import mitra12 from "./mitra12.png";
 import owner from "./owner.png";
 import product1 from "./product1.png";
 import product2 from "./product2.png";
@@ -36,6 +48,10 @@ import product12 from "./product12.png";
 import program1 from "./program1.png";
 import program2 from "./program2.png";
 import program3 from "./program3.png";
+import trusted1 from "./trusted1.png";
+import trusted2 from "./trusted2.png";
+import trusted3 from "./trusted3.png";
+import trusted4 from "./trusted4.png";
 
 export const heroImage = {
   card1: {
@@ -223,3 +239,67 @@ export const productsData = [
   product5, product6, product7, product8,
   product9, product10, product11, product12
 ];
+
+
+export const trustedData = {
+  title: "Dipercaya Berbagai Mitra di Malang",
+  subtitle:
+    "Selama bertahun-tahun, kami telah bekerja sama dengan berbagai instansi, sekolah, dan komunitas di Malang dalam menghadirkan produk batik berkualitas dengan motif khas dan proses produksi yang konsisten.",
+  stats: [
+    { value: "500+", label: "Mitra Terpercaya" },
+    { value: "10.000+", label: "Lembar Kain Diproduksi" },
+    { value: "250", label: "Variasi Motif Batik" },
+  ],
+  images: [
+    trusted1, trusted2, trusted3, trusted4
+  ]
+};
+
+
+export const partnersData = {
+  title: "Mitra Kami",
+  subtitle: "Telah bekerja sama dengan berbagai instansi, komunitas, dan organisasi di Malang.",
+  items: [
+    mitra1, mitra2, mitra3, mitra4,
+    mitra5, mitra6, mitra7, mitra8,
+    mitra9, mitra10, mitra11, mitra12
+  ]
+};
+
+export const faqData = {
+  title: "Frequently Asked Questions",
+  items: [
+    {
+      question: "Bagaimana cara melakukan pemesanan?",
+      answer: "Pemesanan dapat dilakukan melalui WhatsApp, Marketplace/E-commerce, Website, Kunjungan langsung ke toko (offline store)"
+    },
+    {
+      question: "Apakah bisa memesan dengan ukuran khusus dan Apakah ada minimum order?",
+      answer: "Bisa, Anda dapat menghubungi kami untuk mendiskusikan kebutuhan ukuran dan minimum pemesanan."
+    },
+    {
+      question: "Apakah bisa memesan batik dengan desain custom?",
+      answer: "Tentu, kami melayani pemesanan batik dengan desain custom sesuai keinginan Anda."
+    },
+    {
+      question: "Berapa lama proses pengerjaan?",
+      answer: "Waktu pengerjaan bervariasi tergantung jumlah dan tingkat kerumitan pesanan, umumnya memakan waktu 2-4 minggu."
+    },
+    {
+      question: "Metode pembayaran apa saja yang tersedia?",
+      answer: "Kami menerima pembayaran melalui transfer bank, e-wallet, dan pembayaran tunai di toko kami."
+    },
+    {
+      question: "Apakah melayani pengiriman ke seluruh Indonesia?",
+      answer: "Ya, kami melayani pengiriman ke seluruh wilayah di Indonesia menggunakan jasa ekspedisi terpercaya."
+    },
+    {
+      question: "Apakah Batik Sengguruh menerima kerja sama reseller?",
+      answer: "Ya, kami sangat terbuka untuk kerja sama reseller. Silakan hubungi kami untuk informasi lebih lanjut."
+    },
+    {
+      question: "Bagaimana cara merawat produk batik?",
+      answer: "Gunakan lerak atau deterjen berbahan lembut, hindari menjemur di bawah sinar matahari langsung, dan setrika dengan suhu sedang."
+    }
+  ]
+};
