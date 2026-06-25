@@ -9,13 +9,16 @@
 
 import hero1 from "./hero1.png";
 import hero2 from "./hero2.png";
-import member1Img from "./member1.png";
-import member2Img from "./member2.png";
-import member3Img from "./member3.png";
-import member4Img from "./member4.png";
-import member5Img from "./member5.png";
-import member6Img from "./member6.png";
-import ownerImg from "./owner.png";
+import member1 from "./member1.png";
+import member2 from "./member2.png";
+import member3 from "./member3.png";
+import member4 from "./member4.png";
+import member5 from "./member5.png";
+import member6 from "./member6.png";
+import owner from "./owner.png";
+import program1 from "./program1.png";
+import program2 from "./program2.png";
+import program3 from "./program3.png";
 
 export const heroImage = {
   card1: {
@@ -73,43 +76,71 @@ export const teamData = {
       id: "owner",
       name: "Budi Santoso",
       role: "Founder & Owner",
-      image: ownerImg,
+      image: owner,
     },
     {
       id: "member-1",
-      name: "Siti Aminah",
       role: "Lead Creative Designer",
-      image: member2Img,
+      image: member1,
     },
     {
       id: "member-2",
-      name: "Siti Aminah",
       role: "Lead Creative Designer",
-      image: member2Img,
+      image: member2,
     },
     {
       id: "member-3",
-      name: "Andi Wijaya",
       role: "Master Batik Artisan",
-      image: member3Img,
+      image: member3,
     },
     {
       id: "member-4",
-      name: "Rina Kusuma",
       role: "Pattern Specialist",
-      image: member4Img,
+      image: member4,
     },
     {
       id: "member-5",
-      name: "Eko Prasetyo",
       role: "Production Manager",
-      image: member5Img,
+      image: member5,
     },
     {
       id: "member-6",
-      name: "Dewi Lestari",
       role: "Quality Control",
-      image: member6Img,
+      image: member6,
     },
   ],
+};
+
+export const contactData = {
+  whatsapp: "6281234567890", // Ganti dengan nomor WA UMKM yang asli (gunakan format 62...)
+};
+
+export const programsData = {
+  title: "Program Kami",
+  items: [
+    {
+      id: "program-1",
+      title: "Workshop",
+      description: "Belajar membatik langsung dari pengrajin berpengalaman. Cocok untuk sekolah, instansi pemerintah, komunitas, maupun acara team building perusahaan",
+      buttonText: "Pelajari Lebih Lanjut",
+      image: program1,
+      waMessage: "Halo min, saya tertarik dan ingin mendapat informasi lebih lanjut tentang Batik Sengguruh.",
+    },
+    {
+      id: "program-2",
+      title: "Kunjungan",
+      description: "Ajak siswa atau rombongan Anda mengunjungi galeri dan workshop batik kami di Malang. Saksikan langsung proses pembuatan batik dari awal hingga jadi.",
+      buttonText: "Jadwalkan Kunjungan",
+      image: program2,
+      waMessage: "Halo min, saya berencana untuk menjadwalkan Kunjungan ke Batik Sengguruh.",
+    },
+    {
+      id: "program-3",
+      title: "Custom Batik",
+      description: "Pesan seragam batik, souvenir, atau kain batik eksklusif dengan motif dan warna pilihan Anda sendiri. Minimum order fleksibel, cocok untuk sekolah hingga instansi besar.",
+      buttonText: "Pesan Sekarang",
+      image: program3,
+      waMessage: "Halo min, saya ingin berdiskusi mengenai pemesanan Custom Batik.",
+    },
+  ]
 };
