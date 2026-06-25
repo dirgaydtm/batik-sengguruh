@@ -1,3 +1,5 @@
+import he from "he";
+
 export interface BlogPost {
   id: string;
   title: string;
@@ -7,90 +9,74 @@ export interface BlogPost {
   link: string;
 }
 
-export async function fetchLinkMeta(urls: string[]): Promise<BlogPost[]> {
-  const posts: BlogPost[] = [];
+interface BloggerLink {
+  rel: string;
+  href: string;
+}
 
-  for (const url of urls) {
-    try {
-      const res = await fetch(url, {
-        next: { revalidate: 3600 },
-        headers: {
-          "User-Agent":
-            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
-          Accept:
-            "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-          "Accept-Language": "en-US,en;q=0.5",
-        },
-      });
-      if (!res.ok) {
-        posts.push({
-          id: url,
-          title: "Artikel Tidak Ditemukan",
-          date: "Update Terbaru",
-          description: "Mohon periksa kembali tautan yang dimasukkan di asset-data.ts",
-          imageUrl: "",
-          link: url,
-        });
-        continue;
+interface BloggerEntry {
+  id?: { $t: string };
+  title?: { $t: string };
+  published?: { $t: string };
+  summary?: { $t: string };
+  content?: { $t: string };
+  link?: BloggerLink[];
+  media$thumbnail?: { url: string };
+}
+
+export async function fetchBlogPosts(feedUrl: string, maxPosts: number): Promise<BlogPost[]> {
+  try {
+    const finalUrl = `${feedUrl}&max-results=${maxPosts}`;
+    const res = await fetch(finalUrl, { next: { revalidate: 3600 } });
+
+    if (!res.ok) {
+      console.error("Failed to fetch feed, status:", res.status);
+      return [];
+    }
+
+    const data = await res.json();
+    const entries = data.feed?.entry ?? [];
+
+    return entries.map((entry: BloggerEntry) => {
+      const link = entry.link?.find((l: BloggerLink) => l.rel === "alternate")?.href ?? "";
+      const dateRaw = entry.published?.$t ?? new Date().toISOString();
+      const date = new Date(dateRaw);
+      const months = ["Jan", "Feb", "Mar", "Apr", "Mei", "Jun", "Jul", "Agt", "Sep", "Okt", "Nov", "Des"];
+      const formattedDate = `${months[date.getMonth()]} ${date.getFullYear()}`;
+
+      // ambil thumbnail
+      let imageUrl = entry.media$thumbnail?.url ?? "";
+
+      // fallback thumbnail from content if media$thumbnail is missing
+      if (!imageUrl && entry.content && entry.content.$t) {
+        const imgMatch = entry.content.$t.match(/<img[^>]+src="([^">]+)"/i);
+        if (imgMatch) imageUrl = imgMatch[1];
       }
 
-      const html = await res.text();
-
-      // Extract Title
-      const titleMatch =
-        html.match(/<meta property="og:title" content="([^"]+)"/i) ||
-        html.match(/<title>([^<]+)<\/title>/i);
-      let title = titleMatch ? titleMatch[1] : "Artikel Batik Sengguruh";
-      // Clean up common blogger title suffixes
-      title = title.replace(" - Griya Batik Seng - Sengguruh Malang", "").trim();
-
-      // Extract Description
-      let description = "Kunjungi artikel ini untuk membaca selengkapnya mengenai aktivitas dan informasi seputar Griya Batik Sengguruh.";
-      
-      const pMatches = html.match(/<p[^>]*>([\s\S]*?)<\/p>/gi);
-      if (pMatches) {
-        for (const p of pMatches) {
-          let text = p.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
-          // Skip navigation links or empty paragraphs
-          if (text.length > 30 && !text.includes("Menu Home Profil")) {
-            description = text.substring(0, 150) + (text.length > 150 ? "..." : "");
-            break;
-          }
-        }
+      // Pastikan gambar yang diambil adalah resolusi tinggi (s1600)
+      if (imageUrl) {
+        // Handle format lama: /s72-c/ -> /s1600/
+        imageUrl = imageUrl.replace(/\/s[0-9]+(-[a-zA-Z0-9\-]+)?\//, "/s1600/");
+        // Handle format baru: =w320-h240-rw -> =s1600
+        imageUrl = imageUrl.replace(/=[wsdh][0-9]+(-[wsdh][0-9]+)*(-[a-zA-Z0-9\-]+)*/, "=s1600");
       }
 
-      // Extract Image
-      let imageUrl = "";
-      const imgMatch = html.match(/<img[^>]+src="([^">]+)"/i);
-      if (imgMatch) {
-        imageUrl = imgMatch[1];
-      }
+      let rawText = entry.summary?.$t || entry.content?.$t || "";
+      rawText = rawText.replace(/<[^>]+>/g, " ").replace(/\s+/g, " ").trim();
+      const decodedText = he.decode(rawText);
+      const description = decodedText.length > 0 ? `${decodedText.substring(0, 150)}...` : "";
 
-      // Extract Date from Blogger URL format (e.g. /2024/01/...)
-      let date = "";
-      const dateMatch = url.match(/\/(\d{4})\/(\d{2})\//);
-      if (dateMatch) {
-        const year = dateMatch[1];
-        const month = parseInt(dateMatch[2], 10);
-        const months = [
-          "Jan", "Feb", "Mar", "Apr", "Mei", "Jun",
-          "Jul", "Agt", "Sep", "Okt", "Nov", "Des"
-        ];
-        date = `${months[month - 1]} ${year}`;
-      }
-
-      posts.push({
-        id: url,
-        title,
-        date,
+      return {
+        id: entry.id?.$t ?? link,
+        title: entry.title?.$t ?? "Artikel",
+        date: formattedDate,
         description,
         imageUrl,
-        link: url,
-      });
-    } catch (e) {
-      console.error(`Failed to fetch metadata for ${url}`, e);
-    }
+        link,
+      };
+    });
+  } catch (e) {
+    console.error("Error fetching blog posts:", e);
+    return [];
   }
-
-  return posts;
 }

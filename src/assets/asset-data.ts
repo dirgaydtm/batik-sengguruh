@@ -236,17 +236,15 @@ export const batikData = {
 // -------------------------------------------------------------------------
 // 7. DATA BLOG / ARTIKEL TERBARU
 // Digunakan di bagian "Highlight / Update Terbaru".
-// Anda cukup memasukkan link artikel blog asli dari Blogspot Anda. Website 
-// akan secara otomatis mengambil judul dan gambar dari link tersebut.
+// Website sudah diatur untuk mengambil 4 artikel terbaru secara OTOMATIS 
+// langsung dari Blogger (Batik Sengguruh).
 // -------------------------------------------------------------------------
 export const blogData = {
   title: "Highlight / Update Terbaru",
   subtitle: "Berita, kegiatan terbaru, dan informasi seputar Batik Sengguruh dari blog resmi kami.",
   seeMoreLink: "https://www.batiksengguruh.com/search?updated-max=2026-01-24T16:08:00%2B07:00&max-results=3&start=3&by-date=false",
-  links: [
-    "https://www.batiksengguruh.com/2026/04/batik-sengguruh-dan-hasta-padma-hadir.html",
-    "https://www.batiksengguruh.com/2026/02/fgd-industri-batik-malang-berkelanjutan.html"
-  ]
+  feedUrl: "https://www.batiksengguruh.com/feeds/posts/default?alt=json",
+  maxPosts: 4,
 };
 
 // -------------------------------------------------------------------------
