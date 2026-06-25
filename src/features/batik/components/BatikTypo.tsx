@@ -3,12 +3,12 @@
 import { motion } from "motion/react";
 import { cn } from "@/shared/lib/utils";
 
-interface ProductTypoProps {
+interface BatikTypoProps {
   title: string;
   className?: string;
 }
 
-export function ProductTypo({ title, className }: ProductTypoProps) {
+export function BatikTypo({ title, className }: BatikTypoProps) {
   return (
     <div
       className={cn(

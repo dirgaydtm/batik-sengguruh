@@ -4,17 +4,17 @@ import { ArrowUpRight } from "lucide-react";
 import { motion } from "motion/react";
 import Image from "next/image";
 import { useState } from "react";
-import { contactData, productsData } from "@/assets/asset-data";
+import { batikData, contactData } from "@/assets/asset-data";
 import { Button } from "@/shared/components/ui/button";
 import { cn } from "@/shared/lib/utils";
 
-export function ProductCards() {
+export function BatikCards() {
   const [isExpanded, setIsExpanded] = useState(false);
 
   return (
     <div className="flex flex-col w-full max-w-6xl relative z-10 px-5 mx-auto">
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10 w-full">
-        {productsData.items.map((item, idx) => (
+        {batikData.items.map((item, idx) => (
           <motion.div
             key={item.id}
             initial={{ opacity: 0, y: 30 }}
@@ -27,7 +27,7 @@ export function ProductCards() {
             )}
           >
             {/* Image Placeholder */}
-            <div className="w-full aspect-[4/3] bg-gradient-to-br from-[#FDF4EA] to-[#E6CDB8] rounded-2xl overflow-hidden relative mb-5 shadow-sm group">
+            <div className="w-full aspect-4/3 bg-linear-to-br from-[#FDF4EA] to-[#E6CDB8] rounded-2xl overflow-hidden relative mb-5 shadow-sm group">
               {item.image ? (
                 <Image
                   src={item.image}
@@ -68,7 +68,7 @@ export function ProductCards() {
       </div>
 
       {/* Show More Button (Mobile Only) */}
-      {!isExpanded && productsData.items.length > 3 && (
+      {!isExpanded && batikData.items.length > 3 && (
         <div className="mt-10 flex justify-center md:hidden">
           <Button
             onClick={() => setIsExpanded(true)}
