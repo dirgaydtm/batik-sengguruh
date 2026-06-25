@@ -7,6 +7,11 @@
 // 2. Ubah import di bawah ini agar mengarah ke file foto yang baru.
 // =========================================================================
 
+import batik1 from "./batik1.png";
+import batik2 from "./batik1.png";
+import batik3 from "./batik1.png";
+import batik4 from "./batik1.png";
+import batik5 from "./batik1.png";
 import hero1 from "./hero1.png";
 import hero2 from "./hero2.png";
 import member1 from "./member1.png";
@@ -141,6 +146,52 @@ export const programsData = {
       buttonText: "Pesan Sekarang",
       image: program3,
       waMessage: "Halo min, saya ingin berdiskusi mengenai pemesanan Custom Batik.",
+    },
+  ]
+};
+
+export const productsData = {
+  title: "Choose Our Batik",
+  items: [
+    {
+      id: "product-1",
+      title: "Batik Tulis",
+      description: "Dikerjakan langsung menggunakan canting secara manual, Batik Tulis kami menawarkan detail memukau dan nilai seni yang tak lekang oleh waktu. Setiap lembarnya eksklusif dan bercerita.",
+      buttonText: "Pesan Batik Tulis",
+      image: batik1,
+      waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Tulis Sengguruh.",
+    },
+    {
+      id: "product-2",
+      title: "Batik Cap",
+      description: "Menggabungkan keindahan motif tradisional dengan teknik pengecapan, menghasilkan kain batik yang rapi dan elegan, sangat cocok untuk kebutuhan seragam atau pakaian harian.",
+      buttonText: "Pesan Batik Cap",
+      image: batik2,
+      waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Cap Sengguruh.",
+    },
+    {
+      id: "product-3",
+      title: "Batik Caplis",
+      description: "Perpaduan unik antara teknik cap untuk pola dasar dan sentuhan tulis manual untuk detail warna, menciptakan harmoni yang indah namun dengan harga yang lebih terjangkau.",
+      buttonText: "Pesan Batik Caplis",
+      image: batik3,
+      waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Caplis Sengguruh.",
+    },
+    {
+      id: "product-4",
+      title: "Batik Ecoprint",
+      description: "Dibuat dengan pewarna alami dan cetakan daun/bunga asli, Ecoprint menghadirkan pola organik yang ramah lingkungan dengan keunikan corak pada setiap potongan kainnya.",
+      buttonText: "Pesan Batik Ecoprint",
+      image: batik4,
+      waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Ecoprint Sengguruh.",
+    },
+    {
+      id: "product-5",
+      title: "Batik Shibori",
+      description: "Teknik ikat celup ala Jepang yang diaplikasikan dengan sentuhan lokal, menghasilkan motif gradasi dan abstrak yang modern, trendi, serta cocok untuk gaya kasual.",
+      buttonText: "Pesan Batik Shibori",
+      image: batik5,
+      waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Shibori Sengguruh.",
     },
   ]
 };
