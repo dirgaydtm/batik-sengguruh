@@ -1,10 +1,12 @@
-"use client";
+"use client"
 
 import { motion } from "motion/react";
+import GlowOrb from "@/shared/components/GlowOrb";
 
 export default function LocationContainer() {
   return (
-    <section className="relative flex flex-col items-center justify-center w-full py-12 pb-24 overflow-hidden bg-white">
+    <section className="relative flex flex-col items-center justify-center w-full py-12 pb-24">
+      <GlowOrb className="top-1/2 left-1/4" />
       <div className="w-full max-w-5xl px-5 mx-auto relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

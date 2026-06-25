@@ -2,11 +2,14 @@
 
 import { motion } from "motion/react";
 import { teamData } from "@/assets/asset-data";
+import GlowOrb from "@/shared/components/GlowOrb";
 import { TeamCards } from "../components/TeamCards";
 
 export default function TeamContainer() {
   return (
-    <section className="relative flex flex-col items-center justify-center w-full min-h-screen py-24 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center w-full min-h-screen py-24">
+      <GlowOrb className="-top-20 right-10" />
+      <GlowOrb className="bottom-10 -left-10" />
       <div className="flex flex-col items-center justify-center w-full max-w-6xl px-5 text-center mb-16 z-10">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
