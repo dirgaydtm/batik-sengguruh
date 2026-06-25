@@ -243,7 +243,7 @@ export const blogData = {
   title: "Highlight / Update Terbaru",
   subtitle: "Berita, kegiatan terbaru, dan informasi seputar Batik Sengguruh dari blog resmi kami.",
   seeMoreLink: "https://www.batiksengguruh.com/search?updated-max=2026-01-24T16:08:00%2B07:00&max-results=3&start=3&by-date=false",
-  feedUrl: "https://www.batiksengguruh.com/feeds/posts/default?alt=json",
+  feedUrl: "https://www.blogger.com/feeds/8997099788816390146/posts/default?alt=json",
   maxPosts: 4,
 };
 
