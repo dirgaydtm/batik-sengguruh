@@ -5,7 +5,7 @@ import { StatsTypo } from "../components/StatsTypo";
 
 export default function StatsContainer() {
   return (
-    <section className="relative flex flex-col items-center justify-center w-full min-h-screen py-24 overflow-hidden bg-white">
+    <section className="relative flex flex-col items-center justify-center w-full min-h-screen py-24 overflow-hidden">
       <StatsTypo
         title={statsData.title}
         subtitle={statsData.subtitle}

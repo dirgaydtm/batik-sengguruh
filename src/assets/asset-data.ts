@@ -9,6 +9,13 @@
 
 import hero1 from "./hero1.png";
 import hero2 from "./hero2.png";
+import member1Img from "./member1.png";
+import member2Img from "./member2.png";
+import member3Img from "./member3.png";
+import member4Img from "./member4.png";
+import member5Img from "./member5.png";
+import member6Img from "./member6.png";
+import ownerImg from "./owner.png";
 
 export const heroImage = {
   card1: {
@@ -55,6 +62,54 @@ export const statsData = {
         { name: "Sep", val: 9500 },
         { name: "Oct", val: 10000 },
       ],
+    },
+  ],
+};
+
+export const teamData = {
+  title: "Meet Our Team",
+  members: [
+    {
+      id: "owner",
+      name: "Budi Santoso",
+      role: "Founder & Owner",
+      image: ownerImg,
+    },
+    {
+      id: "member-1",
+      name: "Siti Aminah",
+      role: "Lead Creative Designer",
+      image: member2Img,
+    },
+    {
+      id: "member-2",
+      name: "Siti Aminah",
+      role: "Lead Creative Designer",
+      image: member2Img,
+    },
+    {
+      id: "member-3",
+      name: "Andi Wijaya",
+      role: "Master Batik Artisan",
+      image: member3Img,
+    },
+    {
+      id: "member-4",
+      name: "Rina Kusuma",
+      role: "Pattern Specialist",
+      image: member4Img,
+    },
+    {
+      id: "member-5",
+      name: "Eko Prasetyo",
+      role: "Production Manager",
+      image: member5Img,
+    },
+    {
+      id: "member-6",
+      name: "Dewi Lestari",
+      role: "Quality Control",
+      image: member6Img,
     },
   ],
 };
