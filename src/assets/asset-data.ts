@@ -21,6 +21,18 @@ import member4 from "./member4.png";
 import member5 from "./member5.png";
 import member6 from "./member6.png";
 import owner from "./owner.png";
+import product1 from "./product1.png";
+import product2 from "./product2.png";
+import product3 from "./product3.png";
+import product4 from "./product4.png";
+import product5 from "./product5.png";
+import product6 from "./product6.png";
+import product7 from "./product7.png";
+import product8 from "./product8.png";
+import product9 from "./product9.png";
+import product10 from "./product10.png";
+import product11 from "./product11.png";
+import product12 from "./product12.png";
 import program1 from "./program1.png";
 import program2 from "./program2.png";
 import program3 from "./program3.png";
@@ -150,7 +162,7 @@ export const programsData = {
   ]
 };
 
-export const productsData = {
+export const batikData = {
   title: "Choose Our Batik",
   items: [
     {
@@ -195,3 +207,19 @@ export const productsData = {
     },
   ]
 };
+
+export const blogData = {
+  title: "Highlight / Update Terbaru",
+  subtitle: "Berita, kegiatan terbaru, dan informasi seputar Batik Sengguruh dari blog resmi kami.",
+  seeMoreLink: "https://www.batiksengguruh.com/search?updated-max=2026-01-24T16:08:00%2B07:00&max-results=3&start=3&by-date=false",
+  links: [
+    "https://www.batiksengguruh.com/2026/04/batik-sengguruh-dan-hasta-padma-hadir.html",
+    "https://www.batiksengguruh.com/2026/02/fgd-industri-batik-malang-berkelanjutan.html"
+  ]
+};
+
+export const productsData = [
+  product1, product2, product3, product4,
+  product5, product6, product7, product8,
+  product9, product10, product11, product12
+];
