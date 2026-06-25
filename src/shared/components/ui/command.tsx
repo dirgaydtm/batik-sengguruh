@@ -9,11 +9,11 @@ import {
   DialogDescription,
   DialogHeader,
   DialogTitle,
-} from "@/shared/lib/components/ui/dialog";
+} from "@/shared/components/ui/dialog";
 import {
   InputGroup,
   InputGroupAddon,
-} from "@/shared/lib/components/ui/input-group";
+} from "@/shared/components/ui/input-group";
 import { cn } from "@/shared/lib/utils";
 
 function Command({
