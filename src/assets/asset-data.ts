@@ -1,69 +1,49 @@
 // =========================================================================
-// CENTRALIZED ASSET DATA CONFIGURATION
+// PANDUAN MENGGANTI FOTO & KONTEN (UNTUK PEMILIK UMKM)
 // =========================================================================
-// UMKM / Pengelola Web dapat dengan mudah mengganti foto pada halaman Hero
-// dengan cara:
-// 1. Letakkan file foto baru di dalam folder "src/assets/"
-// 2. Ubah import di bawah ini agar mengarah ke file foto yang baru.
+// Selamat datang di file "Data Pusat" untuk website Batik Sengguruh!
+// Di file ini, Bapak/Ibu bisa dengan sangat mudah mengganti teks, nomor WA, 
+// dan foto-foto yang tampil di website TANPA harus paham bahasa pemrograman.
+//
+// CARA MENGGANTI FOTO:
+// 1. Siapkan foto baru yang ingin ditampilkan.
+// 2. Masukkan (copy-paste) foto baru tersebut ke dalam folder bernama "public" di komputer ini.
+// 3. Pastikan Bapak/Ibu mengingat nama file foto tersebut (contoh: "foto-baru.png" atau "logo-baru.jpg").
+// 4. Cari bagian di bawah ini yang fotonya ingin diganti.
+// 5. Ubah teks di dalam tanda kutip menjadi nama file foto Bapak/Ibu (diawali garis miring "/").
+//    Contoh: image: "/batik1.png" diubah menjadi image: "/foto-baru.png"
+// 
+// CARA MENGGANTI TEKS / NOMOR WA:
+// 1. Cukup cari tulisan yang ingin diubah di bawah ini (berada di dalam tanda kutip).
+// 2. Ganti tulisan tersebut sesuai keinginan.
+// 3. Khusus untuk nomor WA, pastikan formatnya menggunakan "62" di depannya tanpa tanda plus (+).
+//    Contoh: "6285135787508"
+// 
+// PERHATIAN: 
+// - Hati-hati jangan sampai menghapus tanda kutip ganda ("...") atau tanda koma (,) di akhir baris.
+// - Cukup ganti teks yang berada DI DALAM tanda kutip saja.
 // =========================================================================
 
-import batik1 from "./batik1.png";
-import batik2 from "./batik1.png";
-import batik3 from "./batik1.png";
-import batik4 from "./batik1.png";
-import batik5 from "./batik1.png";
-import hero1 from "./hero1.png";
-import hero2 from "./hero2.png";
-import member1 from "./member1.png";
-import member2 from "./member2.png";
-import member3 from "./member3.png";
-import member4 from "./member4.png";
-import member5 from "./member5.png";
-import member6 from "./member6.png";
-import mitra1 from "./mitra1.svg";
-import mitra2 from "./mitra2.svg";
-import mitra3 from "./mitra3.svg";
-import mitra4 from "./mitra4.svg";
-import mitra5 from "./mitra5.svg";
-import mitra6 from "./mitra6.svg";
-import mitra7 from "./mitra7.svg";
-import mitra8 from "./mitra8.svg";
-import mitra9 from "./mitra9.svg";
-import mitra10 from "./mitra10.svg";
-import mitra11 from "./mitra11.svg";
-import mitra12 from "./mitra12.svg";
-import owner from "./owner.png";
-import product1 from "./product1.png";
-import product2 from "./product2.png";
-import product3 from "./product3.png";
-import product4 from "./product4.png";
-import product5 from "./product5.png";
-import product6 from "./product6.png";
-import product7 from "./product7.png";
-import product8 from "./product8.png";
-import product9 from "./product9.png";
-import product10 from "./product10.png";
-import product11 from "./product11.png";
-import product12 from "./product12.png";
-import program1 from "./program1.png";
-import program2 from "./program2.png";
-import program3 from "./program3.png";
-import trusted1 from "./trusted1.png";
-import trusted2 from "./trusted2.png";
-import trusted3 from "./trusted3.png";
-import trusted4 from "./trusted4.png";
-
+// -------------------------------------------------------------------------
+// 1. DATA HERO (GAMBAR PALING ATAS SAAT WEBSITE PERTAMA DIBUKA)
+// Digunakan di halaman paling atas (2 Kartu yang bertumpuk)
+// -------------------------------------------------------------------------
 export const heroImage = {
   card1: {
-    src: hero1,
+    src: "/hero1.png",
     alt: "Batik Sengguruh Hero Card 1",
   },
   card2: {
-    src: hero2,
+    src: "/hero2.png",
     alt: "Batik Sengguruh Hero Card 2",
   },
 };
 
+// -------------------------------------------------------------------------
+// 2. DATA STATISTIK & PENCAPAIAN
+// Digunakan di bagian "About Us" untuk menampilkan angka-angka kebanggaan
+// seperti jumlah motif, klien, dan total produksi.
+// -------------------------------------------------------------------------
 export const statsData = {
   title: "Dipercaya ratusan klien di Indonesia",
   subtitle:
@@ -102,48 +82,56 @@ export const statsData = {
   ],
 };
 
+// -------------------------------------------------------------------------
+// 3. DATA TIM KAMI (MEET OUR TEAM)
+// Digunakan untuk menampilkan foto dan jabatan dari pemilik beserta staf.
+// -------------------------------------------------------------------------
 export const teamData = {
   title: "Meet Our Team",
   members: [
     {
       id: "owner",
-      name: "Budi Santoso",
       role: "Founder & Owner",
-      image: owner,
+      image: "/owner.png",
     },
     {
       id: "member-1",
       role: "Lead Creative Designer",
-      image: member1,
+      image: "/member1.png",
     },
     {
       id: "member-2",
       role: "Lead Creative Designer",
-      image: member2,
+      image: "/member2.png",
     },
     {
       id: "member-3",
       role: "Master Batik Artisan",
-      image: member3,
+      image: "/member3.png",
     },
     {
       id: "member-4",
       role: "Pattern Specialist",
-      image: member4,
+      image: "/member4.png",
     },
     {
       id: "member-5",
       role: "Production Manager",
-      image: member5,
+      image: "/member5.png",
     },
     {
       id: "member-6",
       role: "Quality Control",
-      image: member6,
+      image: "/member6.png",
     },
   ],
 };
 
+// -------------------------------------------------------------------------
+// 4. DATA KONTAK & SOSIAL MEDIA
+// Digunakan di bagian Footer paling bawah dan tombol "Shop Now" di navigasi.
+// Pastikan nomor WhatsApp selalu menggunakan angka awalan 62 (bukan 0 atau +).
+// -------------------------------------------------------------------------
 export const contactData = {
   whatsapp: "6285135787508", // Ganti dengan nomor WA UMKM yang asli (gunakan format 62...)
   footerTitleInfo: "Contact Info",
@@ -159,6 +147,11 @@ export const contactData = {
   ]
 };
 
+// -------------------------------------------------------------------------
+// 5. DATA PROGRAM / SERVICES
+// Digunakan di bagian "Program Kami" (seperti Workshop, Kunjungan, Custom Batik).
+// waMessage adalah pesan otomatis yang terkirim saat pengunjung mengklik tombol WhatsApp.
+// -------------------------------------------------------------------------
 export const programsData = {
   title: "Program Kami",
   items: [
@@ -167,7 +160,7 @@ export const programsData = {
       title: "Workshop",
       description: "Belajar membatik langsung dari pengrajin berpengalaman. Cocok untuk sekolah, instansi pemerintah, komunitas, maupun acara team building perusahaan",
       buttonText: "Pelajari Lebih Lanjut",
-      image: program1,
+      image: "/program1.png",
       waMessage: "Halo min, saya tertarik dan ingin mendapat informasi lebih lanjut tentang Batik Sengguruh.",
     },
     {
@@ -175,7 +168,7 @@ export const programsData = {
       title: "Kunjungan",
       description: "Ajak siswa atau rombongan Anda mengunjungi galeri dan workshop batik kami di Malang. Saksikan langsung proses pembuatan batik dari awal hingga jadi.",
       buttonText: "Jadwalkan Kunjungan",
-      image: program2,
+      image: "/program2.png",
       waMessage: "Halo min, saya berencana untuk menjadwalkan Kunjungan ke Batik Sengguruh.",
     },
     {
@@ -183,12 +176,17 @@ export const programsData = {
       title: "Custom Batik",
       description: "Pesan seragam batik, souvenir, atau kain batik eksklusif dengan motif dan warna pilihan Anda sendiri. Minimum order fleksibel, cocok untuk sekolah hingga instansi besar.",
       buttonText: "Pesan Sekarang",
-      image: program3,
+      image: "/program3.png",
       waMessage: "Halo min, saya ingin berdiskusi mengenai pemesanan Custom Batik.",
     },
   ]
 };
 
+// -------------------------------------------------------------------------
+// 6. DATA KATALOG PRODUK BATIK UTAMA
+// Digunakan di bagian "Choose Our Batik" untuk memamerkan jenis-jenis batik
+// (Tulis, Cap, Caplis, Ecoprint, Shibori).
+// -------------------------------------------------------------------------
 export const batikData = {
   title: "Choose Our Batik",
   items: [
@@ -197,7 +195,7 @@ export const batikData = {
       title: "Batik Tulis",
       description: "Dikerjakan langsung menggunakan canting secara manual, Batik Tulis kami menawarkan detail memukau dan nilai seni yang tak lekang oleh waktu. Setiap lembarnya eksklusif dan bercerita.",
       buttonText: "Pesan Batik Tulis",
-      image: batik1,
+      image: "/batik1.png",
       waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Tulis Sengguruh.",
     },
     {
@@ -205,7 +203,7 @@ export const batikData = {
       title: "Batik Cap",
       description: "Menggabungkan keindahan motif tradisional dengan teknik pengecapan, menghasilkan kain batik yang rapi dan elegan, sangat cocok untuk kebutuhan seragam atau pakaian harian.",
       buttonText: "Pesan Batik Cap",
-      image: batik2,
+      image: "/batik2.png",
       waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Cap Sengguruh.",
     },
     {
@@ -213,7 +211,7 @@ export const batikData = {
       title: "Batik Caplis",
       description: "Perpaduan unik antara teknik cap untuk pola dasar dan sentuhan tulis manual untuk detail warna, menciptakan harmoni yang indah namun dengan harga yang lebih terjangkau.",
       buttonText: "Pesan Batik Caplis",
-      image: batik3,
+      image: "/batik3.png",
       waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Caplis Sengguruh.",
     },
     {
@@ -221,7 +219,7 @@ export const batikData = {
       title: "Batik Ecoprint",
       description: "Dibuat dengan pewarna alami dan cetakan daun/bunga asli, Ecoprint menghadirkan pola organik yang ramah lingkungan dengan keunikan corak pada setiap potongan kainnya.",
       buttonText: "Pesan Batik Ecoprint",
-      image: batik4,
+      image: "/batik4.png",
       waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Ecoprint Sengguruh.",
     },
     {
@@ -229,12 +227,18 @@ export const batikData = {
       title: "Batik Shibori",
       description: "Teknik ikat celup ala Jepang yang diaplikasikan dengan sentuhan lokal, menghasilkan motif gradasi dan abstrak yang modern, trendi, serta cocok untuk gaya kasual.",
       buttonText: "Pesan Batik Shibori",
-      image: batik5,
+      image: "/batik5.png",
       waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Shibori Sengguruh.",
     },
   ]
 };
 
+// -------------------------------------------------------------------------
+// 7. DATA BLOG / ARTIKEL TERBARU
+// Digunakan di bagian "Highlight / Update Terbaru".
+// Anda cukup memasukkan link artikel blog asli dari Blogspot Anda. Website 
+// akan secara otomatis mengambil judul dan gambar dari link tersebut.
+// -------------------------------------------------------------------------
 export const blogData = {
   title: "Highlight / Update Terbaru",
   subtitle: "Berita, kegiatan terbaru, dan informasi seputar Batik Sengguruh dari blog resmi kami.",
@@ -245,13 +249,22 @@ export const blogData = {
   ]
 };
 
+// -------------------------------------------------------------------------
+// 8. DATA GALERI FOTO PRODUK TAMBAHAN
+// Digunakan di bagian galeri (Grid Foto) yang berjalan otomatis (Marquee).
+// Masukkan semua nama file foto tambahan ke dalam daftar ini.
+// -------------------------------------------------------------------------
 export const productsData = [
-  product1, product2, product3, product4,
-  product5, product6, product7, product8,
-  product9, product10, product11, product12
+  "/product1.png", "/product2.png", "/product3.png", "/product4.png",
+  "/product5.png", "/product6.png", "/product7.png", "/product8.png",
+  "/product9.png", "/product10.png", "/product11.png", "/product12.png"
 ];
 
-
+// -------------------------------------------------------------------------
+// 9. DATA KEPERCAYAAN (TRUSTED BY)
+// Digunakan di bagian sekumpulan 4 foto kotak sebagai bukti dokumentasi
+// nyata kegiatan instansi yang telah bekerja sama dengan Batik Sengguruh.
+// -------------------------------------------------------------------------
 export const trustedData = {
   title: "Dipercaya Berbagai Mitra di Malang",
   subtitle:
@@ -262,21 +275,30 @@ export const trustedData = {
     { value: "250", label: "Variasi Motif Batik" },
   ],
   images: [
-    trusted1, trusted2, trusted3, trusted4
+    "/trusted1.png", "/trusted2.png", "/trusted3.png", "/trusted4.png"
   ]
 };
 
-
+// -------------------------------------------------------------------------
+// 10. DATA LOGO MITRA (PARTNERS)
+// Digunakan di bagian deretan logo mitra (sponsor/klien) yang berjalan 
+// memanjang dari kiri ke kanan.
+// -------------------------------------------------------------------------
 export const partnersData = {
   title: "Mitra Kami",
   subtitle: "Telah bekerja sama dengan berbagai instansi, komunitas, dan organisasi di Malang.",
   items: [
-    mitra1, mitra2, mitra3, mitra4,
-    mitra5, mitra6, mitra7, mitra8,
-    mitra9, mitra10, mitra11, mitra12
+    "/mitra1.svg", "/mitra2.svg", "/mitra3.svg", "/mitra4.svg",
+    "/mitra5.svg", "/mitra6.svg", "/mitra7.svg", "/mitra8.svg",
+    "/mitra9.svg", "/mitra10.svg", "/mitra11.svg", "/mitra12.svg"
   ]
 };
 
+// -------------------------------------------------------------------------
+// 11. DATA TANYA JAWAB (FAQ)
+// Digunakan di bagian paling bawah untuk daftar pertanyaan yang sering 
+// diajukan pelanggan beserta jawabannya.
+// -------------------------------------------------------------------------
 export const faqData = {
   title: "Frequently Asked Questions",
   items: [
