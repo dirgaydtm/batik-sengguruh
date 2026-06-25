@@ -12,7 +12,16 @@ export async function fetchLinkMeta(urls: string[]): Promise<BlogPost[]> {
 
   for (const url of urls) {
     try {
-      const res = await fetch(url, { next: { revalidate: 3600 } });
+      const res = await fetch(url, {
+        next: { revalidate: 3600 },
+        headers: {
+          "User-Agent":
+            "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36",
+          Accept:
+            "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
+          "Accept-Language": "en-US,en;q=0.5",
+        },
+      });
       if (!res.ok) {
         posts.push({
           id: url,
@@ -37,10 +46,7 @@ export async function fetchLinkMeta(urls: string[]): Promise<BlogPost[]> {
 
       // Extract Description
       let description = "Kunjungi artikel ini untuk membaca selengkapnya mengenai aktivitas dan informasi seputar Griya Batik Sengguruh.";
-      const descMatch =
-        html.match(/<meta property="og:description" content="([^"]+)"/i) ||
-        html.match(/<meta name="description" content="([^"]+)"/i);
-
+      
       const pMatches = html.match(/<p[^>]*>([\s\S]*?)<\/p>/gi);
       if (pMatches) {
         for (const p of pMatches) {
