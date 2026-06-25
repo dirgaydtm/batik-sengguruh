@@ -20,3 +20,41 @@ export const heroImage = {
     alt: "Batik Sengguruh Hero Card 2",
   },
 };
+
+export const statsData = {
+  title: "Dipercaya ratusan klien di Indonesia",
+  subtitle:
+    "Solusi seragam batik, pelatihan sekolah & instansi, dan produksi batik handmade berkualitas",
+  cards: [
+    {
+      id: "motif",
+      subtitle: "Tersedia sekarang",
+      value: "250",
+      label: "Motif Batik",
+    },
+    {
+      id: "klien",
+      subtitle: "Terus bertambah",
+      value: "500 +",
+      label: "Klien dan Mitra",
+    },
+    {
+      id: "produksi",
+      subtitle: "Total Produksi",
+      value: "10.000 +",
+      label: "Lembar Kain",
+      chartData: [
+        { name: "Jan", val: 2000 },
+        { name: "Feb", val: 5000 },
+        { name: "Mar", val: 3000 },
+        { name: "Apr", val: 5000 },
+        { name: "May", val: 4500 },
+        { name: "Jun", val: 7000 },
+        { name: "Jul", val: 6500 },
+        { name: "Aug", val: 8000 },
+        { name: "Sep", val: 9500 },
+        { name: "Oct", val: 10000 },
+      ],
+    },
+  ],
+};
