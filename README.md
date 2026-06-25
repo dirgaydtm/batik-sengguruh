@@ -55,7 +55,7 @@ Berikut adalah peta panduan isi dari file `asset-data.ts` agar Bapak/Ibu tidak b
 4. **DATA KONTAK:** Nomor WhatsApp, Email, Instagram, TikTok, dan YouTube yang muncul di Footer paling bawah.
 5. **DATA PROGRAM:** Layanan seperti Workshop, Kunjungan, dan Custom Batik.
 6. **DATA KATALOG BATIK:** Daftar produk unggulan (Batik Tulis, Cap, Ecoprint, dll).
-7. **DATA BLOG:** Link artikel berita terbaru (Bapak/Ibu cukup memasukkan link Blogspot, website akan otomatis mengambil gambar dan judulnya).
+7. **DATA BLOG:** Pengaturan artikel berita terbaru (Sistem sudah diatur otomatis menarik artikel terbaru dari Blogger, Bapak/Ibu hanya perlu menyesuaikan URL Blog atau jumlah artikelnya jika ingin diubah).
 8. **DATA GALERI:** Kumpulan foto-foto tambahan yang berjalan otomatis (Marquee).
 9. **DATA KEPERCAYAAN (TRUSTED BY):** 4 Foto bukti kegiatan/dokumentasi nyata.
 10. **DATA LOGO MITRA:** Deretan logo klien atau sponsor yang berjalan memanjang di bawah.
