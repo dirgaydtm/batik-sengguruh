@@ -145,7 +145,18 @@ export const teamData = {
 };
 
 export const contactData = {
-  whatsapp: "6281234567890", // Ganti dengan nomor WA UMKM yang asli (gunakan format 62...)
+  whatsapp: "6285135787508", // Ganti dengan nomor WA UMKM yang asli (gunakan format 62...)
+  footerTitleInfo: "Contact Info",
+  footerTitleForm: "Contact Form",
+  contacts: [
+    { type: "whatsapp", label: "0851-3578-7508", link: "https://wa.me/6285135787508" },
+    { type: "whatsapp", label: "0895-7028-5380", link: "https://wa.me/6289570285380" },
+    { type: "email", label: "batik.sengguruh@gmail.com", link: "mailto:batik.sengguruh@gmail.com" },
+    { type: "instagram", label: "@batiksengguruh", link: "https://instagram.com/batiksengguruh" },
+    { type: "instagram", label: "@batikmalang_handmade", link: "https://instagram.com/batikmalang_handmade" },
+    { type: "tiktok", label: "@batiksengguruh", link: "https://www.tiktok.com/@batiksengguruh" },
+    { type: "youtube", label: "@GriyaBatikSengguruh", link: "https://www.youtube.com/@GriyaBatikSengguruh" }
+  ]
 };
 
 export const programsData = {
