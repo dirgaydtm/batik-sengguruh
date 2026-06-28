@@ -5,7 +5,7 @@ import { PartnersCards } from "../components/PartnersCards";
 
 export default function PartnersContainer() {
   return (
-    <section className="relative flex flex-col items-center justify-center w-full py-24 overflow-hidden">
+    <section className="relative flex flex-col items-center justify-center w-full py-24 ">
       <GlowOrb className="-bottom-10 -left-20" />
       <PartnersTypo 
         title={partnersData.title} 

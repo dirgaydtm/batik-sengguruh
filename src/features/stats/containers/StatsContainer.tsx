@@ -8,7 +8,7 @@ export default function StatsContainer() {
   return (
     <section
       id="stats"
-      className="relative flex flex-col items-center justify-center overflow-hidden w-full min-h-screen py-24"
+      className="relative flex flex-col items-center justify-center w-full min-h-screen py-24"
     >
       <GlowOrb className="-bottom-40 -right-20" />
       <GlowOrb className="top-20 -left-20" />

@@ -4,7 +4,7 @@ import { PhotoCards } from "../components/PhotoCards";
 
 export default function HeroContainer() {
   return (
-    <section className="relative flex min-h-screen flex-col items-center w-full overflow-hidden bg-black text-white">
+    <section className="relative flex min-h-screen flex-col items-center w-full  bg-black text-white">
       <div
         aria-hidden
         className="pointer-events-none absolute inset-0 z-0"
