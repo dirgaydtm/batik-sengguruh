@@ -1,6 +1,6 @@
-# Panduan Manajemen Website Batik Sengguruh
+# Website Batik Sengguruh
 
-Selamat datang di sistem manajemen konten website Batik Sengguruh! Website ini dirancang khusus agar Bapak/Ibu (Pemilik UMKM) dapat dengan mudah mengubah foto, teks, dan produk **tanpa harus mengerti bahasa pemrograman rumit**.
+Selamat datang di sistem manajemen konten website Batik Sengguruh! Website ini dirancang khusus agar Bapak/Ibu dapat dengan mudah mengubah foto, teks, dan produk **tanpa harus mengerti bahasa pemrograman rumit**.
 
 Website ini menggunakan arsitektur modern (Next.js) dengan pendekatan "Data Terpusat" (*Centralized Data*). Artinya, Bapak/Ibu hanya perlu mengubah satu file khusus untuk mengganti hampir seluruh isi website.
 
@@ -71,16 +71,47 @@ Berikut adalah peta panduan isi dari file `asset-data.ts` agar Bapak/Ibu tidak b
 
 ---
 
-## 💻 Tech Stack (For Developers / AI Agents)
+## 💻 Panduan Developer
 
-Bagian ini ditujukan khusus untuk Developer atau AI yang akan mengembangkan sistem ini lebih lanjut.
+Bagian ini ditujukan khusus untuk Developer atau AI yang akan memelihara atau mengembangkan sistem ini lebih lanjut di masa depan.
 
+### Tech Stack
 * **Framework:** Next.js (App Router)
 * **Language:** TypeScript
 * **Styling:** Tailwind CSS v4
 * **Animations:** GSAP & React Motion
 * **Icons:** lucide-react & react-icons
 * **Package Manager:** NodeJS atau Bun
-* **Architecture:** Fitur berbasis modul (*Feature-Sliced Design* yang disederhanakan). Setiap bagian (`features/`) memiliki `containers` dan `components`. Data konfigurasi terpusat di `src/assets/asset-data.ts`.
+* **Architecture:** Fitur berbasis modul (*Feature-Sliced Design* yang disederhanakan). Setiap fitur (`features/`) memiliki folder `containers` dan `components` tersendiri. Data konfigurasi dan konten terpusat di `src/assets/asset-data.ts`.
 
-> **Dear Future AI / Dev:** Please do not remove the centralized data design in `asset-data.ts`. It was specifically requested to allow non-technical business owners to easily edit website content without diving into React components. Always verify Next.js versions (specifically v15/React 19 behavior) before implementing heavy structural changes.
+### Persyaratan Sistem (Prerequisites)
+Sebelum menjalankan proyek ini, pastikan komputer Anda sudah terinstal beberapa perangkat lunak berikut:
+1. **[Node.js](https://nodejs.org/)** (Minimal versi 18.x) - Dibutuhkan untuk menjalankan environment JavaScript/TypeScript.
+2. **[Git](https://git-scm.com/)** - Untuk mengambil kode dari repositori (GitHub).
+3. **[Visual Studio Code](https://code.visualstudio.com/)** - Sebagai *Code Editor* yang sangat direkomendasikan.
+
+### Cara Menjalankan Secara Lokal
+
+1. **Unduh kode (Clone repositori):**
+   Buka terminal/CMD lalu jalankan perintah ini untuk mengunduh kode dan masuk ke folder proyek:
+   ```bash
+   git clone https://github.com/dirgaydtm/batik-sengguruh.git
+   cd batik-sengguruh
+   ```
+
+2. **Install dependencies (Instal dependensi):**
+   Jalankan perintah berikut di terminal untuk menginstal semua *library* yang dibutuhkan website:
+   ```bash
+   npm install
+   ```
+
+3. **Jalankan server pengembangan (Development server):**
+   Mulai jalankan server lokal dengan perintah:
+   ```bash
+   npm run dev
+   ```
+
+4. **Buka di Browser:**
+   Buka alamat [http://localhost:3000](http://localhost:3000) di browser Anda untuk melihat hasilnya secara langsung.
+
+> **Dear Future AI / Dev:** Tolong jangan ubah arsitektur data terpusat di `asset-data.ts`. File ini secara khusus diminta agar pemilik bisnis (non-teknis) dapat dengan mudah mengedit konten website tanpa harus menyelami komponen React. Pastikan selalu memverifikasi versi Next.js (khususnya v15/React 19 behavior) sebelum menerapkan perubahan struktural yang besar.
