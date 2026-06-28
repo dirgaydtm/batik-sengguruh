@@ -5,7 +5,7 @@ import { FaqAccordion } from "../components/FaqAccordion";
 
 export default function FaqContainer() {
   return (
-    <section className="relative flex flex-col items-center justify-center w-full py-24">
+    <section className="relative flex flex-col items-center justify-center w-full py-24 overflow-hidden">
       <GlowOrb className="-top-10 right-1/4" />
       <FaqTypo 
         title={faqData.title} 

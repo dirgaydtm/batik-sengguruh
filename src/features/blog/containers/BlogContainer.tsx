@@ -7,7 +7,7 @@ import { fetchBlogPosts } from "../lib/fetchLinkMeta";
 export default async function BlogContainer() {
   const posts = await fetchBlogPosts(blogData.feedUrl, blogData.maxPosts);
   return (
-    <section id="blog" className="relative flex flex-col items-center justify-center w-full py-24">
+    <section id="blog" className="relative flex flex-col items-center justify-center w-full py-24 overflow-hidden">
       <GlowOrb className="top-10 -left-20" />
       <BlogTypo
         title={blogData.title}
