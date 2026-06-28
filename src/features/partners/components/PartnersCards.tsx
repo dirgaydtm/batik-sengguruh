@@ -28,6 +28,7 @@ export function PartnersCards() {
                   alt={`Partner ${idx + 1}`}
                   fill
                   className="object-contain p-2"
+                  loading="lazy"
                 />
               </CardContent>
             </Card>

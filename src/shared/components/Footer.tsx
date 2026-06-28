@@ -102,7 +102,7 @@ function FooterForm() {
 
 export function Footer() {
   return (
-    <footer id="footer" className="w-full bg-[#5D463B] rounded-t-[2rem] text-white pt-8 md:pt-20 px-5">
+    <footer id="footer" className="w-full z-9999 bg-[#5D463B] rounded-t-[2rem] text-white pt-8 md:pt-20 px-5">
       <div className="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-6">
         <FooterInfo />
         <FooterForm />
