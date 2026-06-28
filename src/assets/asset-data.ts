@@ -30,11 +30,11 @@
 // -------------------------------------------------------------------------
 export const heroImage = {
   card1: {
-    src: "/hero1.png",
+    src: "/hero1.jpg",
     alt: "Batik Sengguruh Hero Card 1",
   },
   card2: {
-    src: "/hero2.png",
+    src: "/hero2.jpg",
     alt: "Batik Sengguruh Hero Card 2",
   },
 };
@@ -148,7 +148,7 @@ export const programsData = {
       title: "Workshop",
       description: "Belajar membatik langsung dari pengrajin berpengalaman. Cocok untuk sekolah, instansi pemerintah, komunitas, maupun acara team building perusahaan",
       buttonText: "Pelajari Lebih Lanjut",
-      image: "/program1.png",
+      image: "/program1.webp",
       waMessage: "Halo min, saya tertarik dan ingin mendapat informasi lebih lanjut tentang Batik Sengguruh.",
     },
     {
@@ -156,7 +156,7 @@ export const programsData = {
       title: "Kunjungan",
       description: "Ajak siswa atau rombongan Anda mengunjungi galeri dan workshop batik kami di Malang. Saksikan langsung proses pembuatan batik dari awal hingga jadi.",
       buttonText: "Jadwalkan Kunjungan",
-      image: "/program2.png",
+      image: "/program2.webp",
       waMessage: "Halo min, saya berencana untuk menjadwalkan Kunjungan ke Batik Sengguruh.",
     },
     {
@@ -164,7 +164,7 @@ export const programsData = {
       title: "Custom Batik",
       description: "Pesan seragam batik, souvenir, atau kain batik eksklusif dengan motif dan warna pilihan Anda sendiri. Minimum order fleksibel, cocok untuk sekolah hingga instansi besar.",
       buttonText: "Pesan Sekarang",
-      image: "/program3.png",
+      image: "/program3.webp",
       waMessage: "Halo min, saya ingin berdiskusi mengenai pemesanan Custom Batik.",
     },
   ]
@@ -183,7 +183,7 @@ export const batikData = {
       title: "Batik Tulis",
       description: "Dikerjakan langsung menggunakan canting secara manual, Batik Tulis kami menawarkan detail memukau dan nilai seni yang tak lekang oleh waktu. Setiap lembarnya eksklusif dan bercerita.",
       buttonText: "Pesan Batik Tulis",
-      image: "/batik1.png",
+      image: "/batik1.jpg",
       waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Tulis Sengguruh.",
     },
     {
@@ -191,7 +191,7 @@ export const batikData = {
       title: "Batik Cap",
       description: "Menggabungkan keindahan motif tradisional dengan teknik pengecapan, menghasilkan kain batik yang rapi dan elegan, sangat cocok untuk kebutuhan seragam atau pakaian harian.",
       buttonText: "Pesan Batik Cap",
-      image: "/batik2.png",
+      image: "/batik2.jpg",
       waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Cap Sengguruh.",
     },
     {
@@ -199,7 +199,7 @@ export const batikData = {
       title: "Batik Caplis",
       description: "Perpaduan unik antara teknik cap untuk pola dasar dan sentuhan tulis manual untuk detail warna, menciptakan harmoni yang indah namun dengan harga yang lebih terjangkau.",
       buttonText: "Pesan Batik Caplis",
-      image: "/batik3.png",
+      image: "/batik3.jpg",
       waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Caplis Sengguruh.",
     },
     {
@@ -207,7 +207,7 @@ export const batikData = {
       title: "Batik Ecoprint",
       description: "Dibuat dengan pewarna alami dan cetakan daun/bunga asli, Ecoprint menghadirkan pola organik yang ramah lingkungan dengan keunikan corak pada setiap potongan kainnya.",
       buttonText: "Pesan Batik Ecoprint",
-      image: "/batik4.png",
+      image: "/batik4.jpg",
       waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Ecoprint Sengguruh.",
     },
     {
@@ -215,7 +215,7 @@ export const batikData = {
       title: "Batik Shibori",
       description: "Teknik ikat celup ala Jepang yang diaplikasikan dengan sentuhan lokal, menghasilkan motif gradasi dan abstrak yang modern, trendi, serta cocok untuk gaya kasual.",
       buttonText: "Pesan Batik Shibori",
-      image: "/batik5.png",
+      image: "/batik5.jpg",
       waMessage: "Halo min, saya tertarik untuk melihat koleksi dan memesan Batik Shibori Sengguruh.",
     },
   ]
@@ -241,9 +241,9 @@ export const blogData = {
 // Masukkan semua nama file foto tambahan ke dalam daftar ini.
 // -------------------------------------------------------------------------
 export const productsData = [
-  "/product1.png", "/product2.png", "/product3.png", "/product4.png",
-  "/product5.png", "/product6.png", "/product7.png", "/product8.png",
-  "/product9.png", "/product10.png", "/product11.png", "/product12.png"
+  "/product1.jpg", "/product2.jpg", "/product3.jpg", "/product4.jpg",
+  "/product5.jpg", "/product6.jpg", "/product7.jpg", "/product8.jpg",
+  "/product9.jpg", "/product10.jpg", "/product11.jpg", "/product12.jpg"
 ];
 
 // -------------------------------------------------------------------------
